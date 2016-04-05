@@ -27,4 +27,14 @@ use Mix.Config
 # Configuration from the imported file will override the ones defined
 # here (which is why it is important to import them last).
 #
-#     import_config "#{Mix.env}.exs"
+# import_config "#{Mix.env}.exs"
+
+config :ueberauth, Ueberauth,
+  providers: [
+    flux: {Ueberauth.Strategy.FluxID, []}
+  ]
+
+config :ueberauth, Ueberauth.Strategy.FluxID.OAuth,
+  client_id: "fluxid_client_id",
+  client_secret: "fluxid_client_secret",
+  redirect_uri: "http://localhost:4000/auth/flux/callback"

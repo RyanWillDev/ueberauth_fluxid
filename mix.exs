@@ -35,8 +35,8 @@ defmodule UeberauthFluxID.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:ueberauth, "~> 0.2"},
-      {:oauth2, "~> 0.5"},
+      {:ueberauth, "~> 0.2.0"},
+      {:oauth2, "~> 0.5.0"},
       {:meck, "~> 0.8.4", only: :test},
       {:excoveralls, "~> 0.4", only: :test}
     ]
